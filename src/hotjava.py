@@ -17,7 +17,7 @@ def handler_hotjava(event, context):
         weather_json=r.json()
         link_url=weather_json['link']
         forecast=weather_json['forecasts'][0]
-        today_max=forecast['temperature']['max']['celsius']
+        today_max=int(forecast['temperature']['max']['celsius'])
         date_label=forecast['dateLabel']
         date_num=forecast['date']
         
